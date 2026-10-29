@@ -13,7 +13,8 @@
   var q = /[?&]feed=([^&]*)/.exec(location.search), mode = q ? q[1] : "";
   if (/[?&]egg-demo(?:=([^&]*))?/.test(location.search) && mode !== "off") mode = "demo";
   if (mode === "off") return;
-  var demo = mode === "demo" || (!mode && !custom && /^staging\./.test(location.hostname));
+  var pagesStaging = location.hostname.toLowerCase() === "aska-digital.github.io" && /^\/exo-site-staging(?:\/|$)/.test(location.pathname);
+  var demo = mode === "demo" || (!mode && !custom && (/^staging\./.test(location.hostname) || pagesStaging));
   var base = me && me.src ? new URL("../", me.src).href : "/";
   var url = demo ? base + "brand/egg-feed.demo.json" : (custom || "/api/egg/feed");
   var preview = /[?&]egg=/.test(location.search);                       // a stage preview owns the stage

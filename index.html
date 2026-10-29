@@ -256,7 +256,7 @@
         <p class="part__why">What Exo knows about you should belong to you, move with you, and be quick to search.</p>
         <p>So it lives in one folder you can copy: a one-page summary called the pack, an index called the router that says where each kind of knowledge lives, beliefs (claims about you, each with its evidence and how sure Exo is), imported items such as notes and bookmarks, and the ledger itself.</p>
         <p>Search currently uses keyword retrieval to find matching notes. Embedding search, which can find related meaning even when words differ, and link-following are designed next steps, not built features.</p>
-        <p>The current search stops at a token budget. A token is a piece of a word, and the budget caps how much text the model is handed. No embedding model is currently run by Exo.</p>
+        <p>The current search stops at a token budget. A token is a piece of a word, and the budget caps how much text the model is handed. Embedding and link-following are not part of the default retrieval path.</p>
       </article>
       <article class="part part--wide reveal">
         <p class="part__n">03</p>
@@ -327,7 +327,7 @@
       <ol class="loop__steps">
         <li class="reveal"><span class="loop__n">1</span><div><h3>Capture</h3><p>Corrections, edits, accepts, rejections, direct requests and outcomes are written to the ledger. A correction teaches the most, because it shows exactly where Exo was wrong.</p></div></li>
         <li class="reveal"><span class="loop__n">2</span><div><h3>Review</h3><p>A reviewer works in the background, apart from your conversation, and turns those events into proposed lessons, each with its evidence and confidence. It only proposes. It never changes anything in silence.</p></div></li>
-        <li class="reveal"><span class="loop__n">3</span><div><h3>Climb</h3><p>This is hill climbing. Imagine finding the top of a hill in fog: take one step, check whether you went up, and keep the step only if you did. Each proposal becomes a candidate, the current setup with one change, and is scored on a test built from your past decisions.</p></div></li>
+        <li class="reveal"><span class="loop__n">3</span><div><h3>Climb</h3><p>This is hill climbing. Imagine finding the top of a hill in fog: take one step, check whether you went up, and keep the step only if you did. Selected proposals become candidates, the current setup with one change, and are scored on tests built from past decisions.</p></div></li>
         <li class="reveal"><span class="loop__n">4</span><div><h3>Evaluate gated changes</h3><p>Some proposed changes go through held-out and regression gates before promotion. Other paths use explicit principal rulings or repeated, high-confidence evidence. Remaining proposals are held, become a question, or expire under the promotion policy.</p></div></li>
         <li class="reveal"><span class="loop__n">5</span><div><h3>Show</h3><p>Learned taste appears in the chat, linked to a plain file you can edit. Undoing a lesson adds a new entry and deletes nothing, so every lesson can be traced.</p></div></li>
       </ol>
@@ -502,7 +502,7 @@
 <section class="cta" aria-labelledby="cta-title">
   <div class="wrap cta__in">
     <h2 id="cta-title">Follow the build.</h2>
-    <p>The whitepaper explains how each part works and why. The repository holds every decision, with the reason for it and what was rejected. Access to the repository is limited during the early build.</p>
+    <p>The whitepaper explains how each part works and why. The repository holds every decision, with the reason for it and what was rejected. The repository is public.</p>
     <div class="cta__row">
       <a class="btn btn--primary btn--lg" href="whitepaper/">Read the whitepaper <span aria-hidden="true">→</span></a>
       <a class="btn btn--lg" href="https://github.com/Moissanite-Labs/exo" rel="noopener">github.com/Moissanite-Labs/exo <span class="tag">open source</span></a>
